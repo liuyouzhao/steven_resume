@@ -1,0 +1,42 @@
+<p>
+	第一步：输入手机号和密码
+</p>
+</p>
+<p>
+	第二步：输入预先申请过的64位秘钥
+</p>
+<p>
+	第三步：点击申请，跳转到设备注册，并获得动态客户uuid
+</p>
+<p>
+	如果您没有64位秘钥，请点击联系我们来线下申请
+</p>
+
+
+<link rel="stylesheet" href="index_form_style.css"> <!-- CSS reset -->
+<h1 class="odform-tit"><img src="daetixian-tit.png">申请uuid</h1>
+<div class="odform">
+	<form action="/invite/apply_user_uuid" method="POST" enctype="application/x-www-form-urlencoded">
+		<div class="input-group">
+			<label for="phonenum">手机号码</label>
+			<input type="telephone" name="phonenum" id="phonenum" placeholder="请输入您的手机号码" onblur="index_phonenum_onblur();">
+			<img id="phonenum_check_img" src="none.png"/>
+		</div>
+		<div class="input-group">
+			<label for="authcode">验证码</label>
+			<input type="phonenum" name="authcode" id="authcode" placeholder="请输入短信中的验证码" onblur="index_authcode_onblur();">
+			<img id="authcode_check_img" src="none.png"/>
+		</div>
+		<div class="input-group">
+			<label for="realname">姓名</label>
+			<input type="text" name="realname" id="realname" placeholder="请填写真实姓名以便我们与您联系" onblur="index_realname_onblur();">
+			<img id="realname_check_img" src="none.png"/>
+		</div>
+		<div class="input-group">
+			<label for="email">邮箱</label>
+			<input type="text" name="email" id="email" placeholder="请填写常用邮箱">
+			<img id="realname_check_img" src="none.png"/>
+		</div>
+		<button id="apply_button" disabled="disabled">申请</button>
+	</form>
+</div>

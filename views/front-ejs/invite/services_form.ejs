@@ -1,0 +1,32 @@
+<p>
+	第一步：输入手机号和密码
+</p>
+</p>
+<p>
+	第二步：输入预先申请过的64位秘钥
+</p>
+<p>
+	第三步：点击申请，跳转到设备注册，并获得动态客户uuid
+</p>
+<p>
+	如果您没有64位秘钥，请点击联系我们来线下申请
+</p>
+<link rel="stylesheet" href="index_form_style.css"> <!-- CSS reset -->
+<h1 class="odform-tit"><img src="daetixian-tit.png">申请uuid</h1>
+<div class="odform">
+	<form action="/invite/apply_user_uuid">
+		<div class="input-group">
+			<label for="uuid">唯一ID</label>
+			<input type="text" name="uuid" id="uuid" placeholder="请输入您的手机号码">
+		</div>
+		<div class="input-group">
+			<label for="password">密码</label>
+			<input type="password" id="password" placeholder="请输入密码">
+		</div>
+		<div class="input-group">
+			<label for="insidekey">预约秘钥</label>
+			<input type="text" id="insidekey" placeholder="请输入您的内部预约key">
+		</div>
+		<button>申请</button>
+	</form>
+</div>
