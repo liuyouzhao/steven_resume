@@ -70,30 +70,19 @@ app.get("/invite/2*",function(req,res){
 });
 
 app.get("/invite/3*",function(req,res){
-	app.use("/img", express.static(__dirname + '/views/front-img/invite/'));
-	app.use("/invite", express.static(__dirname + '/views/front-img/invite/'));
-	app.use("/invite", express.static(__dirname + '/views/front-css/invite/'));
-	app.use("/invite", express.static(__dirname + '/views/front-js/invite/'));
+    app.use("/img", express.static(__dirname + '/views/front-img/invite/'));
+    app.use("/invite", express.static(__dirname + '/views/front-img/invite/'));
+    app.use("/invite", express.static(__dirname + '/views/front-css/invite/'));
+    app.use("/invite", express.static(__dirname + '/views/front-js/invite/'));
 
     res.render(path + "invite/projects", {
-    	"title":"test",
-    	"layout":false
+        "header":"My Ability of Internet Technology",
+        "title":"Computer Languages, Code Frameworks and Advantage",
+        "footer":"Steven. HangZhou. CN.",
+        "layout":false
     });
-    console.log(req.query, "3333333");
 });
 
-app.get("/invite/4*",function(req,res){
-	app.use("/img", express.static(__dirname + '/views/front-img/invite/'));
-	app.use("/invite", express.static(__dirname + '/views/front-img/invite/'));
-	app.use("/invite", express.static(__dirname + '/views/front-css/invite/'));
-	app.use("/invite", express.static(__dirname + '/views/front-js/invite/'));
-
-    res.render(path + "invite/contact", {
-    	"title":"test",
-    	"layout":false
-    });
-    console.log(req.query, "444444444444");
-});
 
 /**
 Special request, form handing

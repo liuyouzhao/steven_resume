@@ -93,8 +93,10 @@ jQuery(document).ready(function($){
 			//animate loading bar
 			loadingBarAnimation();
 			
+			window.location.href = newSection;
+
 			//create a new section element and insert it into the DOM
-			var section = $('<section class="cd-section overflow-hidden '+cssSection+'"></section>').appendTo(mainContent);
+			/*var section = $('<section class="cd-section overflow-hidden '+cssSection+'"></section>').appendTo(mainContent);
 			//load the new content from the proper html file
 			section.load(newSection+'.html .cd-section > *', function(event){
 				//finish up the animation and then make the new section visible
@@ -102,6 +104,8 @@ jQuery(document).ready(function($){
 				
 				if(typeof window.onloadPage === 'function')
 					window.onloadPage(newSection);
+				if(typeof window.onloadPageService === 'function')
+					window.onloadPageService(newSection);
 				if(typeof window.onloadHeader === 'function')
 					window.onloadHeader(newSection);
 
@@ -126,7 +130,7 @@ jQuery(document).ready(function($){
 				        window.history.pushState({path: url},'',url);
 				    }
 				});
-			});
+			});*/
 
 		}, 50);
 	}
